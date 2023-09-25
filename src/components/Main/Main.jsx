@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import "./Main.css";
 
 const Main = () => {
+<<<<<<< HEAD
   
   const fechaActual = new Date();
 
@@ -12,6 +13,14 @@ const Main = () => {
   const [todoList, setTodoList] = useState([]);
   const [task, setTask] = useState("");
 
+=======
+  // Declaramos dos estados usando el hook useState de React.
+  // 1. todoList: Almacena la lista de tareas pendientes.
+  // 2. task: Almacena el valor actual del input de entrada de texto.
+  const [todoList, setTodoList] = useState([]);
+  const [task, setTask] = useState("");
+
+>>>>>>> 8fbbb5b85c5d90de324f060ba36d75f4e8427d38
   // Esta función agrega una nueva tarea a la lista.
   const addTodo = () => {
     // Creamos un nuevo objeto 'newTask' con la tarea ingresada,
@@ -75,7 +84,11 @@ const Main = () => {
               className={item.completed ? "completed" : ""}
               onClick={() => completeTodo(item)}
             >
+<<<<<<< HEAD
               {item.name + " - " + fechaActual}
+=======
+              {item.name}
+>>>>>>> 8fbbb5b85c5d90de324f060ba36d75f4e8427d38
             </h3>
             {/* Botón para eliminar la tarea que llama a la función 'deleteTodo'. */}
             <button onClick={() => deleteTodo(item.id)}>🗑️</button>
